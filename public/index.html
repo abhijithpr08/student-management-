@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student Management</h1>
+
+    <form id="studentForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="rollNumber" placeholder="Roll No" required>
+
+        <input type="number" id="maths" placeholder="Maths">
+        <input type="number" id="che" placeholder="Chemistry">
+        <input type="number" id="phy" placeholder="Physics">
+
+        <button type="submit">Save</button>
+    </form>
+
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Roll</th>
+                <th>Maths</th>
+                <th>Che</th>
+                <th>Phy</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
