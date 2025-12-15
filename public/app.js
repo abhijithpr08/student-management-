@@ -27,8 +27,8 @@ function loadStudents() {
     }
   })
     .then(res => res.json())
-  .then(data => {
-    console.log(data);
+    .then(data => {
+      console.log(data);
       tableBody.innerHTML = "";
 
       data.forEach((s) => {
@@ -53,7 +53,7 @@ function loadStudents() {
 }
 
 
-//add/update
+//update
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 

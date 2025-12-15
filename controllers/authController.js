@@ -2,12 +2,9 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-/* =========================
-   REGISTER
-========================= */
+//  REGISTER
 export const registerUser = async (req, res) => {
-  console.log("REGISTER API HIT");
-  console.log(req.body);
+  // console.log(req.body);
 
   try {
     const { name, email, password, image } = req.body;
@@ -27,7 +24,7 @@ export const registerUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      image // 🔥 base64 image stored
+      image //base64 image stored
     });
 
     res.status(201).json({
@@ -40,12 +37,9 @@ export const registerUser = async (req, res) => {
   }
 };
 
-/* =========================
-   LOGIN
-========================= */
+//  LOGIN
 export const loginUser = async (req, res) => {
-  console.log("LOGIN API HIT");
-  console.log(req.body);
+  // console.log(req.body);
 
   try {
     const { email, password } = req.body;
@@ -73,7 +67,7 @@ export const loginUser = async (req, res) => {
     res.json({
       message: "Login success",
       token,
-      userId: user._id   // 🔥 needed for dashboard
+      userId: user._id //needed for dashboard
     });
 
   } catch (error) {
@@ -82,9 +76,7 @@ export const loginUser = async (req, res) => {
   }
 };
 
-/* =========================
-   GET USER PROFILE
-========================= */
+//  GET USER PROFILE
 export const getProfile = async (req, res) => {
   try {
     const user = await User.findById(req.params.id).select("-password");

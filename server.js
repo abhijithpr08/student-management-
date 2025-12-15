@@ -10,14 +10,14 @@ connectDB();
 
 const app = express();
 
-/* REQUIRED */
+//  REQUIRED 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-/* static files */
+//  static files 
 app.use(express.static("public"));
 
-/* routes */
+//  routes 
 app.use("/api/auth", authRoutes);
 app.use("/api/students", studentRoutes);
 
