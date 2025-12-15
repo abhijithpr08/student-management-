@@ -20,6 +20,13 @@
         <main class="main-content">
             <section class="form-section">
                 <div class="form-container">
+                    <div id="profileBox" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img id="profileImg" width="80" height="80" style="border-radius: 50%; object-fit: cover; background: #eee;" alt="Profile Picture" src="https://ui-avatars.com/api/?name=User&background=aaa&color=fff" />
+                        <div>
+                            <h2 id="userName" style="margin: 0; font-size: 1.3rem;">Loading...</h2>
+                            <p id="userEmail" style="margin: 0; color: #666; font-size: 1rem;">Loading...</p>
+                        </div>
+                    </div>
                     <h2><i class="fas fa-plus-circle"></i> Add New Student</h2>
                     <form id="studentForm" class="student-form">
                         <div class="form-group">
