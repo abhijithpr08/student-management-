@@ -5,6 +5,7 @@ import authRoutes from "./routes/authRoutes.js";
 import studentRoutes from "./routes/studentRoutes.js";
 import path from "path";
 
+
 dotenv.config();
 connectDB();
 
