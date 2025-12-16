@@ -1,9 +1,9 @@
 if (!localStorage.getItem("token") || !localStorage.getItem("userId")) {
-  window.location.href = "login.html";
+  window.location.href = "/login";
 }
 function logout() {
   localStorage.removeItem("token");
-  window.location.href = "login.html";
+  window.location.href = "/";
 }
 const API_URL = "/api/students";
 let editingId = null;

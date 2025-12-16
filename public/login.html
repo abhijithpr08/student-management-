@@ -39,8 +39,8 @@
         </form>
 
         <div class="auth-footer">
-          <p>New user? <a href="register.html"><i class="fas fa-user-plus"></i> Create an account</a></p>
-          <a href="index.html" class="back-link">
+          <p>New user? <a href="/register"><i class="fas fa-user-plus"></i> Create an account</a></p>
+          <a href="/" class="back-link">
             <i class="fas fa-arrow-left"></i> Back to Home
           </a>
         </div>
@@ -72,7 +72,7 @@
         if (data.token) {
           localStorage.setItem("token", data.token);
           localStorage.setItem("userId", data.userId);
-          window.location.href = "dashboard.html";
+          window.location.href = "/dashboard";
         } else {
           alert(data.message);
         }
