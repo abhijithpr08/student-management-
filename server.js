@@ -35,10 +35,6 @@ app.get("/dashboard", (req, res) => {
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
-//  REQUIRED 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
 //  static files 
 app.use(express.static("public"));
 
